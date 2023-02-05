@@ -1,0 +1,16 @@
+<h2>Registrations</h2>
+<ul class="registrations">
+  <li *ngFor="let registration of registrations">
+    {{registration.firstName}} {{registration.lastName}}
+    <button (click)="delete(registration)">Delete</button>
+  </li>
+</ul>
+
+<form (ngSubmit)="add(firstName.value, lastName.value, email.value, password.value); firstName.value=''; lastName.value=''; email.value=''; password.value=''">
+  <input type="text" #firstName placeholder="First Name">
+  <input type="text" #lastName placeholder="Last Name">
+  <input type="text" #email placeholder="Email">
+  <input type="password" #password placeholder="Password">
+  <button type="submit">Add</button>
+</form>
+<router-outlet></router-outlet>
