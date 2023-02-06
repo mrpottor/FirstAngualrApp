@@ -11,7 +11,7 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class RegistrationService {
-  private apiUrl = 'api/registrations';
+  private apiUrl = '/assets/Appfolder/registration.json';
 
   constructor(private http: HttpClient) { }
 
